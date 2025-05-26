@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.8 Búsqueda Sistemática</title>
+
+    <!-- Fuentes y librerías -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+
+    <!-- Ajuste visual mínimo para la lección -->
+    <style>
+        body{font-family:"Source Sans Pro",sans-serif;background:#f6f9fc;}
+        .section-box{background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.6rem;margin-bottom:2rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;}
+        #tm-fixed-header-bg{z-index:1;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- =================== Encabezado =================== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">IA Course</a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 text-white mx-auto mb-1">
+                Tema 3.8: Búsqueda Sistemática
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- =================== Contenido =================== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1. Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Búsqueda de metas a profundidad y en anchura</strong></p>
+            </div>
+
+            <!-- 2. Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+                <p>La <strong>búsqueda sistemática</strong> explora de forma exhaustiva un espacio de estados organizado en niveles de profundidad o anchura, con el fin de encontrar un estado objetivo (meta) garantizando completitud (si existe solución) y trazabilidad del recorrido.</p>
+
+                <h4>Búsqueda a Profundidad (Depth-First Search, DFS)</h4>
+                <ul>
+                    <li><strong>Método:</strong> explora lo más profundo posible siguiendo sucesores antes de retroceder (backtracking).</li>
+                    <li><strong>Estructura de datos:</strong> pila LIFO para nodos pendientes.</li>
+                    <li><strong>Complejidad temporal:</strong> O(b<sup>d</sup>), donde b es el factor de ramificación y d la profundidad máxima.</li>
+                    <li><strong>Complejidad espacial:</strong> O(b·d), almacena solo la ruta actual y ramas pendientes.</li>
+                    <li><strong>Completitud:</strong> no garantizada en espacios infinitos o ciclos; requiere manejo de estados visitados para evitar bucles.</li>
+                    <li><strong>Optimalidad:</strong> no es óptima—encuentra la primera solución hallada, no necesariamente la más corta.</li>
+                </ul>
+
+                <h4 class="mt-3">Búsqueda en Anchura (Breadth-First Search, BFS)</h4>
+                <ul>
+                    <li><strong>Método:</strong> explora todos los nodos a nivel k antes de pasar al nivel k+1.</li>
+                    <li><strong>Estructura de datos:</strong> cola FIFO para nodos pendientes.</li>
+                    <li><strong>Complejidad temporal:</strong> O(b<sup>d</sup>), con d la profundidad de la solución más superficial.</li>
+                    <li><strong>Complejidad espacial:</strong> O(b<sup>d</sup>), almacena todos los nodos de todos los niveles hasta d.</li>
+                    <li><strong>Completitud:</strong> garantizada en espacios finitos o infinitos con factor de ramificación finito.</li>
+                    <li><strong>Optimalidad:</strong> óptima si todos los costos de paso son iguales (uniform cost).</li>
+                </ul>
+
+                <h4 class="mt-3">Comparación y uso</h4>
+                <ul>
+                    <li><strong>Memoria:</strong> DFS es más eficiente en espacio; BFS puede quedarse sin memoria en altos niveles.</li>
+                    <li><strong>Rapidez:</strong> en problemas con soluciones profundas, DFS puede encontrar algo rápido; BFS halla la solución más superficial primero.</li>
+                    <li><strong>Aplicaciones:</strong> DFS en detección de ciclos y ordenamiento topológico; BFS en rutas más cortas en grafos no ponderados y análisis de redes sociales.</li>
+                </ul>
+            </div>
+
+            <!-- 3. Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OlvZ1fiYozI" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4. Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="quiz-form">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Cuál estructura usa BFS para gestionar los nodos?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="q1a">Pila LIFO</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="q1b">Cola FIFO</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="q1c">Árbol AND-OR</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="q1d">Lista enlazada</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>En DFS, ¿qué ocurre al llegar a un estado sin sucesores nuevos?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="q2a">Termina la búsqueda</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="q2b">Retrocede al nodo previo</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="q2c">Cambia a BFS</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="q2d">Reinicia desde la raíz</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Qué característica hace óptimo a BFS?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="q3a">Factor de ramificación pequeño</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="q3b">Uso de heurísticas admisibles</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="q3c">Costos uniformes de paso</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="q3d">Retroceso inmediato</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Complejidad espacial de DFS:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="q4a">O(b<sup>d</sup>)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="q4b">O(d)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="q4c">O(b·d)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="q4d">O(1)</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>Un uso típico de DFS es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="q5a">Encontrar ruta más corta</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="q5b">Topological sort</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="q5c">Búsqueda de red social</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="q5d">Planificación condicional</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="quiz-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5. Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>DFS y BFS son métodos fundamentales de búsqueda sistemática: su selección depende de la profundidad esperada de la solución, disponibilidad de memoria y requisitos de optimalidad. Comprender sus características guía la elección del algoritmo adecuado para cada problema.</p>
+            </div>
+
+            <!-- 6. Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Russell, S., &amp; Norvig, P. (2016). <em>Artificial Intelligence: A Modern Approach</em> (3.ª ed.). Pearson.</li>
+                    <li>Nilsson, N. J. (1998). <em>Artificial Intelligence: A New Synthesis</em>. Morgan Kaufmann.</li>
+                    <li>Poole, D., &amp; Mackworth, A. (2010). <em>Artificial Intelligence: Foundations of Computational Agents</em>. Cambridge University Press.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- =================== Scripts =================== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    const correct = ["b","b","c","c","b"];
+    const STORAGE_KEY = "quiz_search_systematic_score";
+    const resultBox  = document.getElementById("quiz-result");
+    const form       = document.getElementById("quiz-form");
+
+    const prev = localStorage.getItem(STORAGE_KEY);
+    if(prev !== null){
+        document.addEventListener("DOMContentLoaded", ()=>{
+            resultBox.textContent = "Intento previo: "+prev+"/"+correct.length+" correctas";
+        });
+    }
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        correct.forEach((ans,i)=>{
+            const chosen = this.querySelector(`input[name=q${i+1}]:checked`);
+            if(chosen && chosen.value === ans) score++;
+        });
+        localStorage.setItem(STORAGE_KEY, score);
+        resultBox.textContent = "Obtuviste "+score+" /"+correct.length+" correctas";
+    });
+})();
+</script>
+</body>
+</html>

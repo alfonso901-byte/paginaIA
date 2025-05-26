@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapas Conceptuales en IA</title>
+
+    <!-- Fuentes y estilos externos -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+
+    <!-- Estilos rápidos -->
+    <style>
+        body{font-family:"Source Sans Pro",sans-serif;background-color:#f6f9fc;}
+        .section-box{background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.5rem;margin-bottom:2rem;}
+        .navbar-nav .nav-link{padding:.5rem 1.2rem;}
+        .navbar-nav .nav-item+ .nav-item{margin-left:.4rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;z-index:2;}
+        #tm-fixed-header-bg{z-index:1;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ===== Encabezado / Navegación ===== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">
+                            IA Course
+                        </a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 text-white mx-auto">
+                Tema&nbsp;2.3: Mapas Conceptuales en IA
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ===== Contenido principal ===== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1 Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Mapas Conceptuales: Representación del Conocimiento, Razonamiento y Metodología en IA</strong></p>
+            </div>
+
+            <!-- 2 Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+                <p>
+                    Los mapas conceptuales son diagramas que representan relaciones semánticas entre conceptos, vitales en IA para visualizar estructuras de conocimiento, procesos de razonamiento y metodologías de diseño.
+                </p>
+                <ul>
+                    <li><strong>Origen epistemológico:</strong> Novak y Gowin (1972) basaron los mapas en la teoría del aprendizaje significativo de Ausubel, donde el conocimiento nuevo se ancla a preexistente a través de proposiciones.</li>
+                    <li><strong>Componentes básicos:</strong>
+                        <ul>
+                            <li><em>Nodo:</em> representa un concepto (p. ej., “Ontología”, “Inferencia”).</li>
+                            <li><em>Enlace:</em> palabra enlace que describe la relación (p. ej., “define”, “deriva de”).</li>
+                            <li><em>Proposición:</em> unidad semántica completa: Concepto–Relación–Concepto.</li>
+                            <li><em>Jerarquía:</em> disposición de conceptos de genérico a específico.</li>
+                            <li><em>Enlaces cruzados:</em> muestran relaciones transversales entre diferentes áreas del conocimiento.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Representación del conocimiento:</strong>
+                        <ul>
+                            <li><em>Ontologías y grafos semánticos:</em> mapas conceptuales precursan los grafos de conocimiento, usados en sistemas expertos y lenguajes semánticos (OWL).</li>
+                            <li><em>Modelo entidad-relación:</em> adaptación para bases de conocimiento, facilitando consultas e inferencia automatizada.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Razonamiento:</strong>
+                        <ul>
+                            <li><em>Inferencia deductiva:</em> sigue enlaces lógicos (p. ej., A ⇒ B ⇒ C).</li>
+                            <li><em>Inferencia abductiva:</em> identifica la mejor explicación para datos observados.</li>
+                            <li><em>Razonamiento basado en casos:</em> busca similitudes en mapas previos para resolver nuevos problemas.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Aspectos metodológicos:</strong>
+                        <ul>
+                            <li><em>Construcción colaborativa:</em> implica a expertos de dominio para validar nodos y enlaces.</li>
+                            <li><em>Iteración y refinamiento:</em> revisión periódica y adición de enlaces cruzados.</li>
+                            <li><em>Herramientas de software:</em> CmapTools y plataformas que exportan a RDF u OWL.</li>
+                            <li><em>Aplicación en desarrollo de IA:</em> modelado de conocimiento y validación de reglas de inferencia.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Beneficios en IA:</strong>
+                        <ul>
+                            <li>Claridad en la estructura de ontologías.</li>
+                            <li>Facilita la generación de reglas y árboles de decisión.</li>
+                            <li>Mejora la trazabilidad en sistemas basados en reglas.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 3 Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BkLhzagLiVY" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4 Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="quiz-form">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Cuál es la unidad semántica básica de un mapa conceptual?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="q1a">Nodo</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="q1b">Enlace</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="q1c">Proposición</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="q1d">Gráfico</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Qué representa un enlace cruzado?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="q2a">Relación jerárquica</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="q2b">Proposición aislada</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="q2c">Conexión entre distintas ramas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="q2d">Nodo principal</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>En IA, los mapas conceptuales se utilizan para:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="q3a">Entrenamiento de redes neuronales</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="q3b">Representar ontologías</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="q3c">Generar datos sintéticos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="q3d">Control de versiones</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Qué enfoque de razonamiento busca la mejor explicación?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="q4a">Deductivo</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="q4b">Abductivo</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="q4c">Inductivo</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="q4d">Pragmático</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>Una práctica metodológica en mapas colaborativos es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="q5a">Definición individual sin revisión</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="q5b">Construcción iterativa y validación de expertos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="q5c">Uso de datos aleatorios</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="q5d">Borrado de enlaces cruzados</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="quiz-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5 Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>
+                    Integrar mapas conceptuales en IA optimiza la representación de conocimiento, facilita diversas formas de razonamiento y aporta un marco metodológico colaborativo para diseñar sistemas inteligentes.
+                </p>
+            </div>
+
+            <!-- 6 Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Novak, J. D., &amp; Gowin, D. B. (1984). <em>Learning How to Learn</em>. Cambridge University Press.</li>
+                    <li>Ausubel, D. P. (1968). <em>Educational Psychology: A Cognitive View</em>. Holt, Rinehart &amp; Winston.</li>
+                    <li>Gruber, T. R. (1993). "A translation approach to portable ontology specifications." <em>Knowledge Acquisition</em>, 5(2), 199-220.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ===== Scripts ===== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    /* respuestas correctas */
+    const correct = ["c","c","b","b","b"];
+    const STORAGE_KEY = "quiz_concept_maps_score";
+    const resultBox  = document.getElementById("quiz-result");
+    const form       = document.getElementById("quiz-form");
+
+    const prev = localStorage.getItem(STORAGE_KEY);
+    if(prev !== null){
+        document.addEventListener("DOMContentLoaded", ()=>{
+            resultBox.textContent = "Intento previo: "+prev+"/"+correct.length+" correctas";
+        });
+    }
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        correct.forEach((ans,i)=>{
+            const chosen = this.querySelector(`input[name=q${i+1}]:checked`);
+            if(chosen && chosen.value === ans) score++;
+        });
+        localStorage.setItem(STORAGE_KEY, score);
+        resultBox.textContent = "Obtuviste "+score+" /"+correct.length+" correctas";
+    });
+})();
+</script>
+</body>
+</html>

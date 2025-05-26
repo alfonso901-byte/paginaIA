@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Razonamiento Monótono</title>
+
+    <!-- Fuentes y estilos externos -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+
+    <!-- Estilos rápidos -->
+    <style>
+        body{font-family:"Source Sans Pro",sans-serif;background-color:#f6f9fc;}
+        .section-box{background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.5rem;margin-bottom:2rem;}
+        .navbar-nav .nav-link{padding:.5rem 1.2rem;}
+        .navbar-nav .nav-item+ .nav-item{margin-left:.4rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;z-index:2;}
+        #tm-fixed-header-bg{z-index:1;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ===== Encabezado / Navegación ===== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">
+                            IA Course
+                        </a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 text-white mx-auto mb-1">
+                Tema&nbsp;2.5: Razonamiento Monótono
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ===== Contenido principal ===== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1 Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Razonamiento Monótono</strong></p>
+            </div>
+
+            <!-- 2 Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+                <p>El <strong>razonamiento monótono</strong> se define como aquel en el que añadir nuevas premisas no invalida las consecuencias ya deducidas. Formalmente, en lógica de primer orden:</p>
+                <p style="margin-left:1em;"><em>Si</em> &Gamma; ⊢ &phi;, <em>entonces para cualquier</em> &Gamma;<sup>&prime;</sup> ⊇ &Gamma;, &Gamma;<sup>&prime;</sup> ⊢ &phi;.</p>
+
+                <h4>Propiedades</h4>
+                <ul>
+                    <li><em>Reflexividad:</em> para toda fórmula &phi;, si &phi; ∈ &Gamma;, entonces &Gamma; ⊢ &phi;.</li>
+                    <li><em>Monotonía:</em> si &Gamma; ⊢ &phi; y &Gamma; ⊆ Δ, entonces Δ ⊢ &phi;.</li>
+                    <li><em>Compactación:</em> si &Gamma; ⊢ &phi;, existe un subconjunto finito &Gamma;<sub>0</sub> ⊆ &Gamma; tal que &Gamma;<sub>0</sub> ⊢ &phi;.</li>
+                </ul>
+
+                <h4>Representación del conocimiento</h4>
+                <ul>
+                    <li>Se usa en <em>sistemas expertos</em> y <em>ontologías</em> donde las reglas y hechos son estables.</li>
+                    <li>Garantiza consistencia global, pero no permite retractar conclusiones ante información nueva.</li>
+                </ul>
+
+                <h4>Mecanismos de inferencia</h4>
+                <ul>
+                    <li><em>Inferencia deductiva:</em> motores lógicos que aplican reglas de inferencia (p.ej., modus ponens) sin retractar.</li>
+                    <li><em>Forward-chaining:</em> aplicación de reglas hacia adelante generando nuevas conclusiones.</li>
+                    <li><em>Backward-chaining:</em> verificación de metas apresurando premisas necesarias.</li>
+                </ul>
+
+                <h4>Aspectos metodológicos</h4>
+                <ul>
+                    <li><em>Diseño de la KB:</em> definición exhaustiva de reglas y hechos sin ambigüedades.</li>
+                    <li><em>Mantenimiento:</em> la extensión de la base de conocimiento requiere recomputar el <em>cierre deductivo</em>.</li>
+                    <li><em>Herramientas:</em> Prolog y motores de reglas (Drools) asumen lógico monótono, sin retractación por defecto.</li>
+                </ul>
+
+                <h4>Desventajas</h4>
+                <ul>
+                    <li>Incapacidad de modelar excepciones o contextos cambiantes.</li>
+                    <li>Rigidez ante evidencia contradictoria.</li>
+                </ul>
+            </div>
+
+            <!-- 3 Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vH7NwNKXlWA" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4 Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="quiz-form">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Qué garantiza la propiedad de monotonía?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="q1a">Nuevas premisas invalidan conclusiones</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="q1b">Conclusiones previas permanecen válidas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="q1c">Se generan conclusiones contradictorias</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="q1d">Requiere contradicción explícita</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>La compactación afirma que:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="q2a">No hay subconjuntos finitos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="q2b">Existe un subconjunto finito que deduce la misma fórmula</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="q2c">Todas las reglas son infinitas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="q2d">No se puede inferir nada</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Qué tipo de inferencia no soporta la lógica monótona?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="q3a">Deductiva</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="q3b">Abductiva con retractación</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="q3c">Forward-chaining</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="q3d">Backward-chaining</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Prolog implementa principalmente razonamiento:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="q4a">Monótono</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="q4b">No monótono</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="q4c">Basado en casos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="q4d">Basado en eventos</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>Una desventaja clave de este razonamiento es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="q5a">Manejo de excepciones</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="q5b">Consistencia global</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="q5c">Inferencia deductiva</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="q5d">Cierre deductivo</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="quiz-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5 Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>
+                    El razonamiento monótono ofrece predictibilidad y consistencia en entornos estables, pero limita la adaptabilidad a nuevos hechos o excepciones, lo cual inspira el desarrollo de razonamientos no monótonos en IA.
+                </p>
+            </div>
+
+            <!-- 6 Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Davis, R., Shrobe, H., &amp; Szolovits, P. (1993). "What is a knowledge representation?" <em>AI Magazine</em>, 14(1), 17–33.</li>
+                    <li>Nute, D. (1987). <em>Defeasible Reasoning</em>. Springer.</li>
+                    <li>Kowalski, R. (1979). <em>Logic for Computer Science: Foundations of Automatic Theorem Proving</em>. Plenum Press.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ===== Scripts ===== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    /* respuestas correctas */
+    const correct = ["b","b","b","a","a"];
+    const STORAGE_KEY = "quiz_monotonic_reasoning_score";
+    const resultBox  = document.getElementById("quiz-result");
+    const form       = document.getElementById("quiz-form");
+
+    const prev = localStorage.getItem(STORAGE_KEY);
+    if(prev !== null){
+        document.addEventListener("DOMContentLoaded", ()=>{
+            resultBox.textContent = "Intento previo: "+prev+"/"+correct.length+" correctas";
+        });
+    }
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        correct.forEach((ans,i)=>{
+            const chosen = this.querySelector(`input[name=q${i+1}]:checked`);
+            if(chosen && chosen.value === ans) score++;
+        });
+        localStorage.setItem(STORAGE_KEY, score);
+        resultBox.textContent = "Obtuviste "+score+" /"+correct.length+" correctas";
+    });
+})();
+</script>
+</body>
+</html>

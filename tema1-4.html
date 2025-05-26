@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El proceso de razonamiento según la lógica</title>
+
+    <!-- Fuentes y estilos externos -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+
+    <!-- Estilos rápidos -->
+    <style>
+        body{font-family:"Source Sans Pro",sans-serif;background-color:#f6f9fc;}
+        .section-box{background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.5rem;margin-bottom:2rem;}
+        .navbar-nav .nav-link{padding:.5rem 1.2rem;}
+        .navbar-nav .nav-item + .nav-item{margin-left:.4rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;z-index:2;}
+        #tm-fixed-header-bg{z-index:1;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ===== Encabezado / Navegación ===== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">
+                            IA Course
+                        </a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 text-white mx-auto">
+                Tema&nbsp;1.4: El proceso de razonamiento según la lógica
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ===== Contenido principal ===== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1 Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>El proceso de razonamiento según la lógica (Axiomas, Teoremas, Demostración)</strong></p>
+            </div>
+
+            <!-- 2 Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+                <!-- ——— Investigación original conservada ——— -->
+                <p>
+                    El proceso de razonamiento formalizado en lógica matemática se fundamenta en la construcción y manipulación de sistemas formales, conformados por:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Axiomas:</strong> son proposiciones básicas que se aceptan sin demostración dentro de un sistema. Actúan como puntos de partida. Ejemplos:
+                        <ul>
+                            <li>En aritmética de Peano: 0 es un número, cada número tiene un sucesor.</li>
+                            <li>En lógica proposicional: leyes de identidad (A → A), leyes de exclusión (A ∨ ¬A).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Reglas de inferencia:</strong> esquemas que permiten derivar nuevas fórmulas (teoremas) a partir de fórmulas previas. Las más comunes:
+                        <ul>
+                            <li><em>Modus Ponens</em>: de A y (A → B) inferir B.</li>
+                            <li><em>Modus Tollens</em>: de ¬B y (A → B) inferir ¬A.</li>
+                            <li><em>Introducción de cuantificadores</em>: en lógica de primer orden.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Teoremas:</strong> son las proposiciones que resultan de aplicar reglas de inferencia a axiomas u otros teoremas. Cada paso en una prueba debe ser válido según las reglas sintácticas del sistema.
+                    </li>
+                    <li>
+                        <strong>Demostración:</strong> es una secuencia finita de fórmulas bien formadas (FBFs), donde cada fórmula es o bien un axioma, o surge de fórmulas anteriores por una regla de inferencia. El objetivo es establecer la validez sintáctica de un teorema.
+                    </li>
+                </ul>
+                <p>
+                    Además, se distinguen dos perspectivas:
+                </p>
+                <ul>
+                    <li><strong>Sintaxis:</strong> estudia la estructura formal y las reglas de construcción de FBFs. No involucra significado.</li>
+                    <li><strong>Semántica:</strong> asigna valor de verdad a las FBFs en un modelo, definiendo <em>consecuencia lógica</em> (⊨) y <em>deducción sintáctica</em> (⊢).
+                        <ul>
+                            <li><em>Corrección (Soundness):</em> todo teorema derivable sintácticamente es verdadero en todos los modelos (⊢ φ ⇒ ⊨ φ).</li>
+                            <li><em>Completitud (Completeness):</em> toda fórmula verdadera en todos los modelos es derivable sintácticamente (⊨ φ ⇒ ⊢ φ).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Tipos de demostraciones y estrategias:</strong></p>
+                <ul>
+                    <li><strong>Demostración directa:</strong> parte de axiomas e hipótesis para llegar al teorema deseado.</li>
+                    <li><strong>Demostración por contradicción:</strong> asume la negación del teorema y muestra que conduce a una inconsistencia.</li>
+                    <li><strong>Demostración por inducción matemática:</strong> útil en sistemas con axiomas de inducción (Peano).</li>
+                    <li><strong>Demostración semántica (modelos):</strong> muestra que una fórmula es verdadera en todos los modelos posibles.</li>
+                </ul>
+                <p>
+                    Por último, los <em>meta-teoremas</em> como el teorema de completitud de Gödel (1930) y los teoremas de incompletitud (1931) de Gödel, establecen límites y posibilidades de los sistemas formales.
+                </p>
+            </div>
+
+            <!-- 3 Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pNLhUFpZ9ds" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4 Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="quiz-form">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Qué es un axioma?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="q1a">Una regla de inferencia</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="q1b">Una proposición asumida como verdadera</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="q1c">Un resultado demostrado</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="q1d">Un error lógico</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Un teorema se caracteriza por:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="q2a">Ser una proposición sin demostración</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="q2b">Derivarse de axiomas mediante reglas de inferencia</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="q2c">Ser siempre falso</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="q2d">Ser parte de la semántica</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Cuál de estos NO forma parte de una demostración formal?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="q3a">Axiomas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="q3b">Hipótesis no justificadas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="q3c">Reglas de inferencia</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="q3d">Pasos intermedios válidos</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>La regla de inferencia modus ponens permite:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="q4a">Inferir ¬A de A</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="q4b">Inferir B de “A → B” y A</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="q4c">Introducir cuantificadores</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="q4d">Eliminar tautologías</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>La demostración por contradicción consiste en:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="q5a">Asumir la negación de lo que se quiere probar y derivar una contradicción</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="q5b">Demostrar directamente desde axiomas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="q5c">Utilizar sólo semántica</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="q5d">Omitir pasos intermedios</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="quiz-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5 Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>
+                    El razonamiento lógico formaliza cómo partimos de verdades aceptadas (axiomas) para derivar nuevos conocimientos (teoremas) mediante pasos rigurosos (demostraciones). Este proceso es esencial en matemáticas y ciencias de la computación para garantizar la corrección y consistencia de las teorías.
+                </p>
+            </div>
+
+            <!-- 6 Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Enderton, H. B. (2001). <em>A Mathematical Introduction to Logic</em> (2ª ed.). Academic Press.</li>
+                    <li>Ebbinghaus, H.-D., Flum, J., &amp; Thomas, W. (1994). <em>Mathematical Logic</em> (2ª ed.). Springer.</li>
+                    <li>Smullyan, R. M. (1995). <em>First-Order Logic</em>. Dover Publications.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ===== Scripts ===== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    /* respuestas correctas */
+    const correct = ["b","b","b","b","a"];
+    const STORAGE_KEY = "quiz_reasoning_logic_score";
+    const resultBox  = document.getElementById("quiz-result");
+    const form       = document.getElementById("quiz-form");
+
+    const prev = localStorage.getItem(STORAGE_KEY);
+    if(prev !== null){
+        document.addEventListener("DOMContentLoaded", ()=>{
+            resultBox.textContent = "Intento previo: "+prev+"/"+correct.length+" correctas";
+        });
+    }
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        correct.forEach((ans,i)=>{
+            const chosen = this.querySelector(`input[name=q${i+1}]:checked`);
+            if(chosen && chosen.value === ans) score++;
+        });
+        localStorage.setItem(STORAGE_KEY, score);
+        resultBox.textContent = "Obtuviste "+score+" /"+correct.length+" correctas";
+    });
+})();
+</script>
+</body>
+</html>

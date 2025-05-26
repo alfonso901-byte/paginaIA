@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sintaxis de Reglas de Producción</title>
+
+    <!-- Fuentes y estilos externos -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+
+    <!-- Estilos rápidos -->
+    <style>
+        body{font-family:"Source Sans Pro",sans-serif;background:#f6f9fc;}
+        .section-box{background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.5rem;margin-bottom:2rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;}
+        #tm-fixed-header-bg{z-index:1;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ===== Encabezado y navegación ===== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">
+                            IA Course
+                        </a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 text-white mx-auto mb-1">
+                Tema 3.4: Sintaxis de las Reglas de Producción
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ===== Contenido principal ===== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1 Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Sintaxis de las Reglas de Producción</strong></p>
+            </div>
+
+            <!-- 2 Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+
+                <p>
+                    La sintaxis define la forma y elementos permitidos en las reglas de producción. Una regla típica en sistemas basados en CLIPS o Jess sigue:
+                </p>
+
+<pre><code>(defrule <em>nombre-regla</em>
+  (antecedente1)
+  (antecedente2)
+  ...
+  =>
+  (accion1)
+  (accion2)
+)</code></pre>
+
+                <h4>Elementos clave</h4>
+                <ul>
+                    <li><strong>defrule:</strong> palabra reservada que inicia la definición.</li>
+                    <li><strong>nombre-regla:</strong> identificador único de la regla.</li>
+                    <li><strong>antecedentes:</strong> condiciones a evaluar, expresadas como patrones o pruebas.</li>
+                    <li><strong>=&gt;:</strong> separador entre antecedentes y acciones.</li>
+                    <li><strong>acciones:</strong> hechos a agregar, modificar o funciones a invocar.</li>
+                </ul>
+
+                <h4 class="mt-4">Patrones en antecedentes</h4>
+                <ul>
+                    <li><em>Constantes:</em> valores literales (números, cadenas).</li>
+                    <li><em>Variables:</em> símbolos precedidos por ? (CLIPS) o $ (Jess) que capturan valores.</li>
+                    <li><em>Tests:</em> condiciones adicionales con <code>(test ...)</code>.</li>
+                </ul>
+
+                <h4 class="mt-4">Acciones comunes</h4>
+                <ul>
+                    <li><code>(assert (hecho valor))</code>: agrega un nuevo hecho.</li>
+                    <li><code>(retract fact-id)</code>: elimina un hecho.</li>
+                    <li><code>(modify fact-id ...)</code>: actualiza campos de un hecho.</li>
+                    <li><code>(printout t "mensaje" crlf)</code>: muestra información.</li>
+                    <li><code>(bind ?var valor)</code>: asigna variable.</li>
+                </ul>
+
+                <h4 class="mt-4">Buenas prácticas</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-user-edit text-secondary"></i> Nombres significativos para reglas.</li>
+                    <li><i class="fas fa-stream text-primary"></i> Mantener reglas simples y cohesivas.</li>
+                    <li><i class="fas fa-clipboard-list text-success"></i> Documentar objetivos y prioridades.</li>
+                </ul>
+            </div>
+
+            <!-- 3 Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rH3h5f3BuK0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4 Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="quiz-form">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Qué palabra inicia la definición de una regla en CLIPS?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="q1a">(rule</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="q1b">(defrule</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="q1c">(defmodule</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="q1d">(declare</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>El separador entre antecedentes y acciones es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="q2a">-&gt;</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="q2b">==&gt;</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="q2c">=&gt;</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="q2d">:=</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Para capturar un valor en un antecedente usamos:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="q3a">constante</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="q3b">variable (?var)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="q3c">test</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="q3d">función</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Cuál acción agrega un hecho?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="q4a">(printout ...)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="q4b">(assert ...)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="q4c">(modify ...)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="q4d">(retract ...)</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>Una buena práctica es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="q5a">Nombres crípticos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="q5b">Documentar reglas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="q5c">Mezclar contextos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="q5d">Evitar comentarios</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="quiz-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5 Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>
+                    La sintaxis clara y consistente de las reglas de producción es esencial para la legibilidad, mantenibilidad y correcta ejecución de sistemas expertos.
+                </p>
+            </div>
+
+            <!-- 6 Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Giarratano, J. C., & Riley, G. D. (2005). <em>Expert Systems: Principles and Programming</em>. Thomson Course Technology.</li>
+                    <li>Forgy, C. L. (1982). “Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem.” <em>Artificial Intelligence</em>, 19(1), 17–37.</li>
+                    <li>Clancey, W. J. (1983). “The Epistemology of a Rule-Based Expert System—A Framework for Explanation.” <em>Artificial Intelligence</em>, 20(3), 215–251.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ===== Scripts ===== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    const correct = ["b","c","b","b","b"];   // Respuestas correctas
+    const STORAGE_KEY = "quiz_sintaxis_rules_score";
+    const resultBox  = document.getElementById("quiz-result");
+    const form       = document.getElementById("quiz-form");
+
+    const prev = localStorage.getItem(STORAGE_KEY);
+    if(prev !== null){
+        document.addEventListener("DOMContentLoaded", ()=>{
+            resultBox.textContent = "Intento previo: "+prev+"/"+correct.length+" correctas";
+        });
+    }
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        correct.forEach((ans,i)=>{
+            const chosen = this.querySelector(`input[name=q${i+1}]:checked`);
+            if(chosen && chosen.value === ans) score++;
+        });
+        localStorage.setItem(STORAGE_KEY, score);
+        resultBox.textContent = "Obtuviste "+score+" /"+correct.length+" correctas";
+    });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.5 Procesamiento de Lenguaje Natural</title>
+
+    <!-- librerías -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+
+    <!-- formato unificado -->
+    <style>
+        body         {font-family:"Source Sans Pro",sans-serif;background:#f6f9fc;}
+        .section-box {background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.6rem;margin-bottom:2rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ========= encabezado ========= -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">IA Course</a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 text-white mx-auto mb-1">
+                Tema 4.5: Procesamiento de Lenguaje Natural – Fundamentos y Aplicaciones
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ========= contenido ========= -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1. Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Procesamiento de Lenguaje Natural: Conceptos básicos, Desarrollos actuales y Aplicaciones</strong></p>
+            </div>
+
+            <!-- 2. Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+
+                <!-- *** investigación original preservada *** -->
+                <h4>Conceptos básicos</h4>
+                <ul>
+                    <li><strong>Tokenización:</strong> segmentación de texto en unidades básicas (tokens, subpalabras). Métodos: reglas, WordPiece, BPE, SentencePiece.</li>
+                    <li><strong>Análisis lingüístico:</strong>
+                        <ul>
+                            <li>Morfología: lematización, stemming.</li>
+                            <li>Sintaxis: POS-tagging, parsing dependiente/constituente.</li>
+                            <li>Semántica: entidades, desambiguación, representaciones distribucionales.</li>
+                            <li>Pragmática y discurso: coreferencia, coherencia, implicatura.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Representaciones vectoriales:</strong> one-hot → embeddings densos (Word2Vec, GloVe) → contextuales (ELMo, BERT).</li>
+                    <li><strong>Modelos secuencia:</strong> n-gramas, HMM, RNN/LSTM, Transformers. El Transformer utiliza <em>self-attention</em> para capturar dependencias globales en paralelo.</li>
+                    <li><strong>Pre-entrenamiento y fine-tuning:</strong> objetivos como MLM (BERT) y causal LM (GPT). Transferencia a tareas específicas con pocas etiquetas.</li>
+                    <li><strong>Evaluación:</strong> métricas BLEU, ROUGE, F1, perplexity, exact match. Benchmarks: GLUE, SuperGLUE, SQuAD.</li>
+                </ul>
+
+                <h4 class="mt-3">Desarrollos actuales y aplicaciones</h4>
+                <ul>
+                    <li><strong>Modelos de lenguaje grandes (LLM):</strong> GPT-4o, Claude, Gemini—capaces de razonamiento, generación y code completion.</li>
+                    <li><strong>Retrieval-Augmented Generation (RAG):</strong> combina búsqueda vectorial con generación para respuestas actualizadas y rastreables.</li>
+                    <li><strong>Multimodalidad:</strong> modelos que procesan texto + imagen + audio (e.g., GPT-4o vision, Llava, VILA).</li>
+                    <li><strong>Traducción automática neural (NMT):</strong> Transformers con atención multilingüe, cero-shot, y adaptaciones al dominio.</li>
+                    <li><strong>Speech &amp; audio:</strong> modelos end-to-end (Whisper, NeMo) integran ASR, diarización y TTS.</li>
+                    <li><strong>Edge NLP:</strong> distilación, cuantización 4-bit, LoRA para ejecutar chatbots en dispositivos móviles.</li>
+                    <li><strong>Aplicaciones clave:</strong> asistentes virtuales, análisis de sentimientos, resumen legal/biomédico, clasificación de correos de phishing, extracción de información en contratos, redacción creativa y educativos personalizados.</li>
+                    <li><strong>Tendencias de investigación:</strong> alineamiento con preferencias humanas (RLHF/RLAIF), robustez adversarial, mitigación de sesgos, interpretabilidad (attention maps, LIME, SHAP-NLP).</li>
+                </ul>
+
+                <h4 class="mt-3">Desafíos</h4>
+                <ul>
+                    <li><strong>Hallucination:</strong> generación plausible pero incorrecta; se aborda con verificación externa y técnicas RAG.</li>
+                    <li><strong>Sesgo y equidad:</strong> vocabulario y datos representativos, filtrado y re-ponderación.</li>
+                    <li><strong>Eficiencia:</strong> entrenamiento costoso → sparsity, mixture-of-experts, hardware (TPU, GPU, ASIC).</li>
+                    <li><strong>Seguridad:</strong> jailbreaking, prompt injection, filtrado de contenido.</li>
+                </ul>
+            </div>
+
+            <!-- 3. Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8t0vNu2fCCM" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4. Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="nlp-quiz">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Qué mecanismo permite a los Transformers modelar dependencias largas sin recurrencia?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="nq1a">Convolución 1D</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="nq1b">Self-attention</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="nq1c">Pooling máximo</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="nq1d">Gramáticas libres de contexto</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>El objetivo de pre-entrenamiento de BERT es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="nq2a">Causal LM</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="nq2b">Masked Language Modeling</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="nq2c">Reconstrucción autoencoder de imágenes</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="nq2d">Clasificación de voz</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Cuál métrica se usa comúnmente para evaluar resumen automático?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="nq3a">BLEU</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="nq3b">ROUGE</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="nq3c">mAP</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="nq3d">PSNR</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>La técnica RAG combina:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="nq4a">Traducción + síntesis de voz</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="nq4b">Recuperación de información + generación</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="nq4c">Tokenización + stemming</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="nq4d">Parsing + POS tagging</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>Una ventaja de la distilación de modelos es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="nq5a">Aumentar el tamaño de parámetro</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="nq5b">Reducir latencia y memoria</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="nq5c">Introducir sesgos intencionales</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="nq5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="nq5d">Eliminar la necesidad de entrenamiento</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="nlp-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5. Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>El PLN ha pasado de métodos estadísticos clásicos a modelos de lenguaje grandes capaces de comprender y generar texto con alto grado de coherencia. Las técnicas modernas—Transformers, pre-entrenamiento masivo y RAG—permiten soluciones versátiles en traducción, asistencia conversacional y análisis de texto, con desafíos activos en robustez, ética y eficiencia.</p>
+            </div>
+
+            <!-- 6. Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Jurafsky, D., &amp; Martin, J. H. (2023). <em>Speech and Language Processing</em> (4ª ed. draft). Prentice-Hall.</li>
+                    <li>Vaswani, A., et al. (2017). “Attention Is All You Need.” <em>NeurIPS 2017</em>.</li>
+                    <li>Devlin, J., et al. (2019). “BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding.” <em>NAACL 2019</em>.</li>
+                    <li>Brown, T. B., et al. (2020). “Language Models are Few-Shot Learners.” <em>NeurIPS 2020</em>.</li>
+                    <li>Lewis, P., et al. (2020). “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.” <em>NeurIPS 2020</em>.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ========= scripts ========= -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    const key  = "nlp_quiz_score";
+    const ans  = ["b","b","b","b","b"];
+    const form = document.getElementById("nlp-quiz");
+    const box  = document.getElementById("nlp-result");
+
+    const prev = localStorage.getItem(key);
+    if(prev!==null) window.addEventListener("DOMContentLoaded",()=>box.textContent="Intento previo: "+prev+"/5 correctas");
+
+    form.addEventListener("submit",e=>{
+        e.preventDefault();
+        let score=0;
+        ans.forEach((a,i)=>{
+            const sel=form.querySelector(`input[name=q${i+1}]:checked`);
+            if(sel && sel.value===a) score++;
+        });
+        localStorage.setItem(key,score);
+        box.textContent="Obtuviste "+score+" /5 correctas";
+    });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algoritmos de exploración de alternativas</title>
+
+    <!-- Fuentes y estilos externos -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+
+    <!-- Estilos rápidos -->
+    <style>
+        body{font-family:"Source Sans Pro",sans-serif;background-color:#f6f9fc;}
+        .section-box{background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.5rem;margin-bottom:2rem;}
+        .navbar-nav .nav-link{padding:.5rem 1.2rem;}
+        .navbar-nav .nav-item + .nav-item{margin-left:.4rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;z-index:2;}
+        #tm-fixed-header-bg{z-index:1;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ===== Encabezado / Navegación ===== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">
+                            IA Course
+                        </a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 text-white mx-auto">
+                Tema&nbsp;1.8.1: Algoritmos de exploración de alternativas
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ===== Contenido principal ===== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1 Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Algoritmos de exploración de alternativas</strong></p>
+            </div>
+
+            <!-- 2 Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+                <p>
+                    Los <strong>algoritmos de exploración de alternativas</strong> buscan soluciones recorriendo el espacio de estados de un problema. Se caracterizan por:
+                </p>
+                <ul>
+                    <li><strong>Espacio de estados:</strong> conjunto de configuraciones posibles, representado como grafo o árbol.</li>
+                    <li><strong>Estados inicial y meta:</strong> punto de partida y objetivos definidos.</li>
+                    <li><strong>Operadores:</strong> acciones que transforman un estado en otro.</li>
+                </ul>
+                <p><strong>Técnicas de exploración:</strong></p>
+                <ul>
+                    <li><strong>Búsqueda no informada:</strong> no utiliza conocimiento adicional más allá de la definición del problema.
+                        <ul>
+                            <li><em>Anchura (Breadth-First Search):</em> explora nivel a nivel, garantiza la solución óptima en profundidad uniforme, alto uso de memoria.</li>
+                            <li><em>Profundidad (Depth-First Search):</em> explora un camino hasta el final antes de retroceder, bajo uso de memoria, puede quedar atrapada en ciclos.</li>
+                            <li><em>Coste uniforme:</em> selecciona el nodo con menor coste acumulado, equivalente a BFS si los costes son uniformes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Búsqueda informada (heurística):</strong> utiliza funciones heurísticas para guiar la exploración.
+                        <ul>
+                            <li><em>A*:</em> f(n)=g(n)+h(n), donde g(n) es coste desde inicial y h(n) heurística admisible; garantiza optimalidad si h es admisible y consistente.</li>
+                            <li><em>Greedy best-first:</em> expande el nodo con menor h(n), más rápido pero no óptimo.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Búsqueda local:</strong> comienza desde una solución inicial y explora vecinos.
+                        <ul>
+                            <li><em>Hill Climbing:</em> selecciona el vecino con mejor heurística, eficiente pero puede atascarse en óptimos locales.</li>
+                            <li><em>Recocido simulado:</em> permite movimientos peores con cierta probabilidad, escapando de óptimos locales.</li>
+                            <li><em>Algoritmos genéticos:</em> poblaciones de soluciones combinadas y mutadas, exploración global y explotación.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    Los algoritmos de exploración equilibran exhaustividad y eficiencia: la elección depende de la estructura del problema, requisitos de optimalidad y recursos disponibles.
+                </p>
+            </div>
+
+            <!-- 3 Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wx--8vV0BqM" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4 Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="quiz-form">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Qué algoritmo no informada garantiza encontrar la solución más superficial?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="q1a">DFS</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="q1b">BFS</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="q1c">A*</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="q1d">Hill Climbing</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>En A*, la función f(n) combina:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="q2a">g(n) y h(n)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="q2b">h(n) y d(n)</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="q2c">Coste y probabilidad</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="q2d">n y h(n)</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Hill Climbing puede fallar por:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="q3a">Óptimos globales</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="q3b">Óptimos locales</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="q3c">Exhaustividad</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="q3d">Consistencia</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>La búsqueda de coste uniforme es equivalente a BFS cuando:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="q4a">Todos los costes son cero</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="q4b">Todos los costes son iguales</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="q4c">La heurística es admisible</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="q4d">No hay ciclos</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>¿Qué técnica permite escapar de óptimos locales?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="q5a">DFS</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="q5b">Recocido simulado</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="q5c">BFS</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="q5d">Hill Climbing puro</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="quiz-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5 Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>
+                    Los algoritmos de exploración de alternativas son la base de la búsqueda en IA y optimización. Su eficiencia depende de la estrategia (no informada vs informada vs local) y de la calidad de heurísticas y operadores.
+                </p>
+            </div>
+
+            <!-- 6 Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Russell, S., &amp; Norvig, P. (2021). <em>Artificial Intelligence: A Modern Approach</em> (4ª ed.). Pearson.</li>
+                    <li>Pearl, J. (1984). <em>Heuristics: Intelligent Search Strategies for Computer Problem Solving</em>. Addison-Wesley.</li>
+                    <li>Hertz, A., &amp; de Werra, D. (1987). "The tabou search approach to the traveling salesman problem." <em>Networks</em>, 18(4), 293-305.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ===== Scripts ===== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    /* respuestas correctas */
+    const correct = ["b","a","b","b","b"];
+    const STORAGE_KEY = "quiz_search_algorithms_score";
+    const resultBox  = document.getElementById("quiz-result");
+    const form       = document.getElementById("quiz-form");
+
+    const prev = localStorage.getItem(STORAGE_KEY);
+    if(prev !== null){
+        document.addEventListener("DOMContentLoaded", ()=>{
+            resultBox.textContent = "Intento previo: "+prev+"/"+correct.length+" correctas";
+        });
+    }
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        correct.forEach((ans,i)=>{
+            const chosen = this.querySelector(`input[name=q${i+1}]:checked`);
+            if(chosen && chosen.value === ans) score++;
+        });
+        localStorage.setItem(STORAGE_KEY, score);
+        resultBox.textContent = "Obtuviste "+score+" /"+correct.length+" correctas";
+    });
+})();
+</script>
+</body>
+</html>

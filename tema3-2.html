@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métodos de Inferencia en Reglas</title>
+
+    <!-- Fuentes y estilos externos -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+
+    <!-- Estilos rápidos -->
+    <style>
+        body{font-family:"Source Sans Pro",sans-serif;background-color:#f6f9fc;}
+        .section-box{background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.5rem;margin-bottom:2rem;}
+        .navbar-nav .nav-link{padding:.5rem 1.2rem;}
+        .navbar-nav .nav-item+ .nav-item{margin-left:.4rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;z-index:2;}
+        #tm-fixed-header-bg{z-index:1;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ===== Encabezado / Navegación ===== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">
+                            IA Course
+                        </a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 text-white mx-auto mb-1">
+                Tema&nbsp;3.2: Métodos de Inferencia en Reglas
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ===== Contenido principal ===== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1 Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Métodos de Inferencia en Reglas</strong></p>
+            </div>
+
+            <!-- 2 Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+
+                <p>
+                    En sistemas basados en reglas, la inferencia es el proceso de aplicar reglas a hechos para generar nuevas conclusiones. Los métodos más usados son:
+                </p>
+
+                <h4>1. Forward Chaining</h4>
+                <ul>
+                    <li>Modelo data-driven que comienza con hechos y aplica reglas cuyo antecedente es verdadero.</li>
+                    <li>Cada regla disparada añade nuevos hechos a la base de conocimiento.</li>
+                    <li>Útil para sistemas de monitorización y diagnóstico continuo.</li>
+                </ul>
+
+                <h4>2. Backward Chaining</h4>
+                <ul>
+                    <li>Modelo goal-driven que comienza con una meta (consecuente) y busca reglas que la produzcan.</li>
+                    <li>Verifica recursivamente que los antecedentes de la regla sean verdaderos, generando sub-metas.</li>
+                    <li>Frecuente en sistemas de preguntas-respuestas y diagnóstico dirigido.</li>
+                </ul>
+
+                <h4>3. Mix Chaining</h4>
+                <ul>
+                    <li>Combina forward y backward chaining para equilibrar exploración y búsqueda dirigida.</li>
+                    <li>Primero explora datos relevantes, luego retrocede para verificar metas específicas.</li>
+                </ul>
+
+                <h4>4. Razonamiento Basado en Producción</h4>
+                <ul>
+                    <li>Utiliza una agenda y control de conflictos para decidir qué regla disparar cuando varias están activadas.</li>
+                    <li>Estrategias de resolución de conflictos: orden textual, prioridad de reglas, recencia de hechos.</li>
+                </ul>
+
+                <h4>5. Inferencia de Consistencia</h4>
+                <ul>
+                    <li>Verifica que la adición de nuevos hechos no introduzca contradicciones.</li>
+                    <li>Se usa en reglas de restricción y validación de bases de datos.</li>
+                </ul>
+
+                <h4 class="mt-4">Representación y Metodología</h4>
+                <ul>
+                    <li><i class="fas fa-project-diagram text-primary"></i> Diseño de árboles de inferencia para trazar cadenas de reglas.</li>
+                    <li><i class="fas fa-users text-secondary"></i> Talleres de revisión de resultados intermedios para validar caminos de inferencia.</li>
+                    <li><i class="fas fa-cogs text-success"></i> Herramientas: motores de forward/backward chaining en Drools, Jess y CLIPS.</li>
+                </ul>
+            </div>
+
+            <!-- 3 Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KUZl8ixU_dk" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4 Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="quiz-form">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Cuál inicia la inferencia desde hechos hacia conclusiones?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="q1a">Forward Chaining</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="q1b">Backward Chaining</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="q1c">Mix Chaining</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="q1d">Inferencia de consistencia</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Backward Chaining es útil cuando:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="q2a">Hay muchas metas iniciales</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="q2b">Se busca verificar una meta específica</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="q2c">El sistema es data-driven</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="q2d">No hay control de conflictos</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Una estrategia de conflicto consiste en:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="q3a">Ejecución aleatoria de reglas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="q3b">Selección basada en prioridad de reglas</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="q3c">Descarga de la base de datos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="q3d">Eliminación de hechos</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Mix Chaining combina:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="q4a">Dos motores de inferencia idénticos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="q4b">Forward y backward chaining</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="q4c">Inferencia y aprendizaje automático</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="q4d">Reducción de conflictos y consistency check</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>Una herramienta que implementa estos métodos es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="q5a">TensorFlow</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="q5b">Drools</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="q5c">PyMC3</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="q5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="q5d">CmapTools</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="quiz-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5 Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>
+                    Los métodos de inferencia en sistemas de reglas establecen el flujo de datos y objetivos, permitiendo construir sistemas expertos efectivos para diagnóstico, control y asesoramiento.
+                </p>
+            </div>
+
+            <!-- 6 Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Forgy, C. L. (1982). "Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem." <em>Artificial Intelligence</em>, 19(1), 17–37.</li>
+                    <li>Clancey, W. J. (1983). "The Epistemology of a Rule-Based Expert System—A Framework for Explanation." <em>Artificial Intelligence</em>, 20(3), 215–251.</li>
+                    <li>Giarratano, J. C., &amp; Riley, G. D. (2005). <em>Expert Systems: Principles and Programming</em>. Thomson Course Technology.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ===== Scripts ===== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    const correct = ["a","b","b","b","b"];   // Respuestas correctas
+    const STORAGE_KEY = "quiz_inference_rules_score";
+    const resultBox  = document.getElementById("quiz-result");
+    const form       = document.getElementById("quiz-form");
+
+    const prev = localStorage.getItem(STORAGE_KEY);
+    if(prev !== null){
+        document.addEventListener("DOMContentLoaded", ()=>{
+            resultBox.textContent = "Intento previo: "+prev+"/"+correct.length+" correctas";
+        });
+    }
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        correct.forEach((ans,i)=>{
+            const chosen = this.querySelector(`input[name=q${i+1}]:checked`);
+            if(chosen && chosen.value === ans) score++;
+        });
+        localStorage.setItem(STORAGE_KEY, score);
+        resultBox.textContent = "Obtuviste "+score+" /"+correct.length+" correctas";
+    });
+})();
+</script>
+</body>
+</html>

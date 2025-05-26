@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.3 Visión Artificial</title>
+
+    <!-- librerías -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+
+    <!-- formato unificado -->
+    <style>
+        body         {font-family:"Source Sans Pro",sans-serif;background:#f6f9fc;}
+        .section-box {background:#fff;border-radius:.75rem;box-shadow:0 3px 10px rgba(0,0,0,.07);padding:2rem 1.6rem;margin-bottom:2rem;}
+        .tm-welcome-container{min-height:50vh;display:flex;align-items:center;justify-content:center;}
+    </style>
+</head>
+
+<body>
+<div class="tm-page-wrap mx-auto">
+
+    <!-- ======== encabezado ======== -->
+    <header class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-7 col-md-4">
+                        <a href="index.html" class="navbar-brand text-white font-weight-bold">IA Course</a>
+                    </div>
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <nav class="navbar navbar-expand-lg ml-auto" id="tm-main-nav">
+                            <button class="navbar-toggler tm-bg-black py-2 px-3 collapsed" type="button"
+                                    data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                    <i class="fas fa-times tm-menu-opened-icon"></i>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- héroe -->
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1 text-center">
+            <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 text-white mx-auto mb-1">
+                Tema 4.3: Visión Artificial – Fundamentos y Aplicaciones
+            </p>
+        </div>
+        <div id="tm-fixed-header-bg"></div>
+    </header>
+
+    <!-- ======== contenido ======== -->
+    <main class="container-fluid">
+        <div class="mx-auto tm-content-container pt-4 pb-5" style="max-width:900px;">
+
+            <!-- 1. Nombre del tema -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">1. Nombre del tema</h2>
+                <p><strong>Visión Artificial: Conceptos básicos, Desarrollos actuales y Aplicaciones</strong></p>
+            </div>
+
+            <!-- 2. Fundamento teórico -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">2. Fundamento teórico</h2>
+
+                <!-- *** investigación original preservada *** -->
+                <h4>Conceptos básicos</h4>
+                <ul>
+                    <li><strong>Imagen digital:</strong> matriz de píxeles; cada píxel contiene intensidad (grises) o triplete RGB (color). Otros espacios: HSV, YCbCr, Lab.</li>
+                    <li><strong>Pipeline de visión clásica:</strong>
+                        <ol>
+                            <li><em>Adquisición:</em> cámaras CCD/CMOS, sensores multiespectrales, estéreos, RGB-D.</li>
+                            <li><em>Preprocesamiento:</em> filtrado (Gauss, Mediana), normalización de iluminación, corrección geométrica.</li>
+                            <li><em>Extracción de características:</em> bordes (Canny, Sobel), esquinas (Harris), descriptores locales (SIFT, ORB) y globales (HOG).</li>
+                            <li><em>Reconocimiento / decisión:</em> clasificadores (SVM, k-NN) o redes neuronales.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Convolución:</strong> operación fundamental que “desliza” un kernel sobre la imagen para detectar patrones. Las CNN aprenden estos kernels durante el entrenamiento.</li>
+                    <li><strong>Tareas nucleares:</strong> clasificación, detección de objetos, segmentación semántica/instancia, estimación de pose 2D-3D, seguimiento (tracking), reconstrucción 3D y reconocimiento de acciones.</li>
+                    <li><strong>Métrica de desempeño:</strong> accuracy, mAP (mean Average Precision), IoU (Intersection-over-Union), PSNR/SSIM para calidad de imagen.</li>
+                    <li><strong>Dataset &amp; aprendizaje:</strong> ImageNet, COCO, KITTI, Cityscapes; configuraciones supervisadas, auto-supervisadas y few-shot.</li>
+                </ul>
+
+                <h4 class="mt-3">Desarrollos actuales y aplicaciones</h4>
+                <ul>
+                    <li><strong>Vision Transformers (ViT, Swin):</strong> reemplazan convoluciones por auto-atención; logran SOTA en clasificación y detección.</li>
+                    <li><strong>Modelos multimodales:</strong> CLIP y Gemini fusionan texto-imagen para búsqueda semántica, captioning y prompting visual.</li>
+                    <li><strong>Segmentación generativa:</strong> Segment-Anything (SAM) produce máscaras precisas con un solo clic.</li>
+                    <li><strong>NeRF y 3D Gaussian Splatting:</strong> renders fotorrealistas 3D a partir de vistas RGB; claves en XR y juegos.</li>
+                    <li><strong>Edge Vision:</strong> despliegue de redes optimizadas (TensorRT, ONNX) en cámaras industriales y móviles para inspección o analítica minorista en tiempo real.</li>
+                    <li><strong>Visión médica:</strong> diagnóstico asistido por IA en radiología (detección de tumores, hemorragias) y cirugía guiada por imágenes.</li>
+                    <li><strong>Conducción autónoma:</strong> fusión de cámaras con LiDAR/Radar; redes BEV (Bird-Eye-View) para planificación de ruta segura.</li>
+                    <li><strong>Generación de imágenes y video:</strong> Stable Diffusion, Sora; controladas por texto y guiadas por reconocimiento de escenas.</li>
+                    <li><strong>Seguridad y biometría:</strong> reconocimiento facial, gait analysis, detección de anomalías, visión térmica para control de acceso.</li>
+                </ul>
+
+                <h4 class="mt-3">Retos y tendencias</h4>
+                <ul>
+                    <li><strong>Robustez adversarial:</strong> defensa contra perturbaciones imperceptibles.</li>
+                    <li><strong>Bias y ética:</strong> datasets con diversidad; regulación de reconocimiento facial.</li>
+                    <li><strong>Aprendizaje con menos datos:</strong> self-supervised, synthetic data, transfer learning.</li>
+                    <li><strong>Computación eficiente:</strong> pruning, cuantización, arquitecturas ligeras (MobileNet, EfficientNet-Lite).</li>
+                </ul>
+            </div>
+
+            <!-- 3. Video explicativo -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">3. Video explicativo</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MY9A1lVw9us" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 4. Evaluación -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">4. Evaluación</h2>
+                <form id="cv-quiz">
+                    <ol>
+                        <li class="mb-3">
+                            <p>¿Qué operación aprenden las CNN para extraer patrones espaciales?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq1a" name="q1" value="a" class="custom-control-input"><label class="custom-control-label" for="cvq1a">Transformada de Fourier</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq1b" name="q1" value="b" class="custom-control-input"><label class="custom-control-label" for="cvq1b">Convolución</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq1c" name="q1" value="c" class="custom-control-input"><label class="custom-control-label" for="cvq1c">Pooling máximo</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq1d" name="q1" value="d" class="custom-control-input"><label class="custom-control-label" for="cvq1d">Clasificación softmax</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>El mAP es una métrica usada principalmente en:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq2a" name="q2" value="a" class="custom-control-input"><label class="custom-control-label" for="cvq2a">Reconstrucción 3D</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq2b" name="q2" value="b" class="custom-control-input"><label class="custom-control-label" for="cvq2b">Detección de objetos</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq2c" name="q2" value="c" class="custom-control-input"><label class="custom-control-label" for="cvq2c">Compresión de imágenes</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq2d" name="q2" value="d" class="custom-control-input"><label class="custom-control-label" for="cvq2d">Balanceo de datasets</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>¿Cuál técnica permite sintetizar vistas 3D fotorrealistas a partir de imágenes 2D?</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq3a" name="q3" value="a" class="custom-control-input"><label class="custom-control-label" for="cvq3a">GAN</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq3b" name="q3" value="b" class="custom-control-input"><label class="custom-control-label" for="cvq3b">NeRF</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq3c" name="q3" value="c" class="custom-control-input"><label class="custom-control-label" for="cvq3c">LSTM</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq3d" name="q3" value="d" class="custom-control-input"><label class="custom-control-label" for="cvq3d">k-Medias</label></div>
+                        </li>
+
+                        <li class="mb-3">
+                            <p>Segment-Anything se clasifica como un modelo de:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq4a" name="q4" value="a" class="custom-control-input"><label class="custom-control-label" for="cvq4a">Clasificación</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq4b" name="q4" value="b" class="custom-control-input"><label class="custom-control-label" for="cvq4b">Segmentación generativa</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq4c" name="q4" value="c" class="custom-control-input"><label class="custom-control-label" for="cvq4c">Estimación de pose</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq4d" name="q4" value="d" class="custom-control-input"><label class="custom-control-label" for="cvq4d">Super-resolución</label></div>
+                        </li>
+
+                        <li class="mb-4">
+                            <p>Una razón clave para cuantizar un modelo de visión es:</p>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq5a" name="q5" value="a" class="custom-control-input"><label class="custom-control-label" for="cvq5a">Aumentar el número de parámetros</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq5b" name="q5" value="b" class="custom-control-input"><label class="custom-control-label" for="cvq5b">Reducir memoria y energía en edge devices</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq5c" name="q5" value="c" class="custom-control-input"><label class="custom-control-label" for="cvq5c">Mejorar la precisión en alta resolución</label></div>
+                            <div class="custom-control custom-radio"><input type="radio" id="cvq5d" name="q5" value="d" class="custom-control-input"><label class="custom-control-label" for="cvq5d">Crear más clases de salida</label></div>
+                        </li>
+                    </ol>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="cv-result" class="mt-3 font-weight-bold"></div>
+            </div>
+
+            <!-- 5. Conclusión -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">5. Conclusión</h2>
+                <p>La visión artificial ha evolucionado de métodos basados en ingeniería de características a redes profundas y transformadores capaces de comprender escenas complejas y generar contenido nuevo. Sus aplicaciones abarcan desde la medicina hasta la conducción autónoma, y los avances continúan impulsados por modelos multimodales, aprendizaje auto-supervisado y hardware especializado para inferencia eficiente.</p>
+            </div>
+
+            <!-- 6. Referencias -->
+            <div class="section-box">
+                <h2 class="tm-text-primary mb-3">6. Referencias APA</h2>
+                <ul class="mb-0">
+                    <li>Szeliski, R. (2022). <em>Computer Vision: Algorithms and Applications</em> (2ª ed.). Springer.</li>
+                    <li>Dosovitskiy, A., et al. (2021). “An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.” <em>ICLR 2021</em>.</li>
+                    <li>Ramesh, A., et al. (2021). “Zero-Shot Text-to-Image Generation.” <em>ICML 2021</em>.</li>
+                    <li>Kirillov, A., et al. (2023). “Segment Anything.” <em>arXiv:2304.02643</em>.</li>
+                    <li>Mildenhall, B., et al. (2020). “NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis.” <em>ECCV 2020</em>.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- ========= scripts ========= -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+(function(){
+    const key  = "cv_quiz_score";
+    const ans  = ["b","b","b","b","b"];
+    const form = document.getElementById("cv-quiz");
+    const box  = document.getElementById("cv-result");
+
+    const prev = localStorage.getItem(key);
+    if(prev!==null) window.addEventListener("DOMContentLoaded",()=>box.textContent="Intento previo: "+prev+"/5 correctas");
+
+    form.addEventListener("submit",e=>{
+        e.preventDefault();
+        let score=0;
+        ans.forEach((a,i)=>{
+            const sel=form.querySelector(`input[name=q${i+1}]:checked`);
+            if(sel && sel.value===a) score++;
+        });
+        localStorage.setItem(key,score);
+        box.textContent="Obtuviste "+score+" /5 correctas";
+    });
+})();
+</script>
+</body>
+</html>
